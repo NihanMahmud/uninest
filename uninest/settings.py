@@ -2,17 +2,17 @@ from pathlib import Path
 
 import os
 SECRET_KEY = os.environ.get("SECRET_KEY")
-DEBUG = os.environ.get("DEBUG", "False") == "True"
+DEBUG = "False"
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# SECRET_KEY = 'django-insecure-%r*ywb+)hz$vtfumw3#od#vqq60%h@_zs8j(bvw4*&o5h-6t!r'
 
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.railway.app",
+]
 
 
 DATABASES = {
